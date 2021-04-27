@@ -3,8 +3,150 @@
   <head>
     <meta charset="utf-8">
     <title>DISEÑO DE CARRUSEL</title>
+
   </head>
   <body>
+
+    <ul id="lightSlider" class="gallery">
+  <li data-thumb="img/4.jpg"> <a href="#"> <img src="img/4.jpg" /> </a> </li>
+  <li data-thumb="img/5.jpg"> <a href="#"> <img src="img/5.jpg" /> </a> </li>
+  <li data-thumb="img/7.png"> <a href="#"> <img src="img/7.png" /> </a> </li>
+
+
+  </ul>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/jquery.lightSlider.js"></script>
+<script type="text/javascript">
+02
+$(document).ready(function() {
+03
+$('#lightSlider').lightSlider({
+04
+gallery:true,
+05
+minSlide:1,
+06
+maxSlide:1,
+07
+auto:true
+08
+});
+09
+});
+10
+$(document).ready(function() {
+02
+  var slider = $("#light-slider").lightSlider();
+03
+  slider.goToSlide(3);
+04
+  slider.goToPrevSlide();
+05
+  slider.goToNextSlide();
+06
+  slider.getCurrentSlideCount();
+07
+  slider.refresh();
+08
+  slider.play();
+09
+  slider.pause();
+10
+  slider.destroy();
+11
+});
+$(document).ready(function() {
+02
+$('#lightSlider').lightSlider({
+03
+item: 3,
+04
+slideMove: 1,
+05
+slideMargin: 10,
+06
+addClass:'',
+07
+
+08
+mode:"slide",// Type of transition 'slide' and 'fade'.
+09
+useCSS:true,// If true LightSlider will use CSS transitions. if falls jquery animation will be used.
+10
+speed: 1000,// Transition duration (in ms).
+11
+cssEasing:'ease',// 'cubic-bezier(0.25, 0, 0.25, 1)'
+12
+easing:'linear',// The type of "easing". ex: 'linear', 'ease', 'ease-in', 'ease-out', 'ease-in-out', 'cubic-bezier(n,n,n,n)'.
+13
+auto:false,// If true, the Slider will automatically start to play.
+14
+pause: 3000,// The time (in ms) between each auto transition
+15
+loop:true,// If false, will disable the ability to loop back to the beginning of the slide when on the last element.
+16
+
+17
+controls:true,// if controls:false, controls will not be added
+18
+prevHtml:'',// custom text for prev control
+19
+nextHtml:'',// custom text for next control
+20
+rtl:false,
+21
+keyPress:true,// Enable keyboard navigation
+22
+adaptiveHeight:false,
+
+24
+verticalHeight: 500,
+25
+vThumbWidth: 100,
+26
+thumbItem: 10,
+27
+galleryMargin: 5,
+28
+pager:true,// Enable pager option
+29
+gallery:false,// Enable gallery mode
+30
+thumbMargin:3,// Spacing between each thumbnails
+31
+currentPagerPosition:'middle',// 'left' OR 'middle', 'right'
+32
+
+33
+enableTouch:true,
+34
+enableDrag:true,
+35
+freeMove:false,
+36
+swipeThreshold:40,// By setting the swipeThreshold you can set how far the user must swipe for the next/prev slide
+37
+responsive: [],
+38
+
+39
+onBeforeStart:function($el) {},
+40
+onSliderLoad:function($el) {},
+41
+onBeforeSlide:function($el,scene) {},
+42
+onAfterSlide:function($el,scene) {},
+43
+onBeforeNextSlide:function($el,scene) {},
+44
+onBeforePrevSlide:function($el,scene) {}
+45
+});
+46
+});
+
+</script>
 
   </body>
 </html>
